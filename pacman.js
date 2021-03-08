@@ -129,7 +129,7 @@ Pacman.Ghost = function (game, map, colour) {
     function getColour() { 
         if (eatable) { 
             if (secondsAgo(eatable) > 5) { 
-                return game.getTick() % 20 > 10 ? "#FFFFFF" : "#0000BB";
+                return game.getTick() % 20 > 10 ? "#FF0000" : "#0000BB";
             } else { 
                 return "#0000BB";
             }
