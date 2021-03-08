@@ -21,7 +21,7 @@ var NONE        = 4,
     DYING       = 10,
     Pacman      = {};
 
-Pacman.FPS = 30;
+Pacman.FPS = 60;
 
 Pacman.Ghost = function (game, map, colour) {
 
@@ -34,7 +34,7 @@ Pacman.Ghost = function (game, map, colour) {
     function getNewCoord(dir, current) { 
         
         var speed  = isVunerable() ? 1 : isHidden() ? 4 : 2,
-            xSpeed = (dir === LEFT && -speed || dir === RIGHT && speed || 0),
+            xSpeed = (dir === LEFT && -speed * 2 || dir === RIGHT && speed || 0),
             ySpeed = (dir === DOWN && speed || dir === UP && -speed || 0);
     
         return {
